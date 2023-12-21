@@ -1,0 +1,66 @@
+---
+import { Astronav, MenuItems, MenuIcon, Dropdown, DropdownItems, DropdownSubmenu } from "astro-navbar";
+---
+
+<style>
+    .navbar {
+      background-color: black;
+      color: white;
+      border: 2px solid blue;
+      animation: border-animation 2s infinite;
+    }
+  
+    @keyframes border-animation {
+      0% {
+        border-color: blue;
+      }
+      50% {
+        border-color: white;
+      }
+      100% {
+        border-color: blue;
+      }
+    }
+  </style>
+  
+  <div class="navbar">
+    <Astronav>
+      <div class="flex justify-between">
+        <a>Tu Logo</a>
+        <MenuIcon class="w-4 h-4 text-gray-800" />
+      </div>
+      <MenuItems class="hidden lg:flex">
+        <ul>
+          <li>Inicio</li>
+          <li>Acerca de</li>
+          <li>
+            <Dropdown class="group">
+              <button>
+                <span>Servicios</span>
+                <svg class="group-open:rotate-180">...</svg>
+              </button>
+              <DropdownItems>
+                <div class="absolute top-0">
+                  <ul>
+                    <li>Menú 1</li>
+                    <li>Menú 2</li>
+                    <li>
+                      <DropdownSubmenu>
+                        <button>Submenú</button>
+                        <DropdownItems>
+                          <ul>
+                            <li>Submenú 1</li>
+                            <li>Submenú 2</li>
+                          </ul>
+                        </DropdownItems>
+                      </DropdownSubmenu>
+                    </li>
+                  </ul>
+                </div>
+              </DropdownItems>
+            </Dropdown>
+          </li>
+        </ul>
+      </MenuItems>
+    </Astronav>
+  </div>
