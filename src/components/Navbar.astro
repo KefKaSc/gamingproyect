@@ -2,37 +2,17 @@
 import { Astronav, MenuItems, MenuIcon, Dropdown, DropdownItems, DropdownSubmenu } from "astro-navbar";
 ---
 
-
-<div class="navbar">
-  <a>Tu Logo</a>
+<div>
   <Astronav>
-    <MenuIcon class="w-4 h-4 text-gray-800" />
+    
     <MenuItems class="hidden lg:flex">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li>
-          <Dropdown class="group">
-            <button>
-              <span>Equipos</span>
+        <li>Home</li>
+        <li>Equipos</li>
+        <li>Comunidades</li>
+        <li>Torneos</li>
         
-            </button>
-            <DropdownItems>
-              <div class="absolute top-0">
-                <ul>
-                  <li>Norte America</li>
-                  <li>Europa</li>
-                  <li>Asia</li>
-                </ul>
-              </div>
-            </DropdownItems>
-          </Dropdown>
-        </li>
-        <li><a href="#">Comunidades</a></li>
-        <li><a href="#">Streamers</a></li>
-        <li><a href="#">Torneos</a></li>
       </ul>
     </MenuItems>
-    <button class="celeste">Registrarse</button>
-    <button class="celeste">Ingresar</button>
   </Astronav>
 </div>
