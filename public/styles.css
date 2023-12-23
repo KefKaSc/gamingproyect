@@ -1,52 +1,80 @@
-/* Establece el color de fondo en negro */
+/* Establece la imagen de fondo de la página */
 body {
-  background-color: black;
+  background-image: url('planeta.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-/* Establece el color de las letras en blanco */
-body {
-  color: white;
-}
-
-/* Agrega un efecto de brillo cuando el mouse está sobre el texto */
-nav ul li:hover a {
-  color: #fff;
-  text-shadow: 0 0 10px #fff;
-}
-nav ul {
-  display: flex;
-  flex-direction: column;
-}
-
-
-/* Centra el navbar y lo fija en la parte superior */
+/* Establece el color de fondo y la opacidad de la barra de navegación */
 nav {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  opacity: 0.8;
+
+  /* Establece la posición de la barra de navegación en la parte superior de la página */
   position: fixed;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  padding: 20px 0;
-  box-sizing: border-box;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
-  background-color: rgba(0, 0, 0, 0.8);
+
+  /* Establece la dirección de la barra de navegación como vertical */
+  flex-direction: column;
+
+  /* Establece un borde negro de 1 píxel alrededor de los botones de la barra de navegación */
+  border: 1px solid black;
 }
 
-/* Agrega padding a los elementos del menú */
-nav ul li a {
-  padding: 10px;
-  border-right: 1px solid white;
+/* Establece el color del texto en los botones de la barra de navegación cuando se pasa el cursor sobre ellos */
+nav ul li:hover a {
+  color: #fff;
 }
 
-/* Elimina la barra horizontal del último botón del menú */
-nav ul li:last-child a {
-  border-right: none;
+/* Establece las reglas de estilo para la barra de navegación cuando la pantalla es de 768 píxeles o menos */
+@media screen and (max-width: 768px) {
+  /* Oculta los elementos de la barra de navegación que no se muestran en la versión móvil */
+  .hidden {
+    display: none;
+  }
+
+  /* Muestra el icono de hamburguesa en la versión móvil */
+  .burger-icon {
+    display: block;
+  }
+
+  /* Oculta los elementos de la barra de navegación en la versión móvil */
+  .menu-items {
+    display: none;
+  }
+
+  /* Muestra los elementos de la barra de navegación cuando se hace clic en el icono de hamburguesa */
+  .menu-items.active {
+    display: block;
+  }
 }
 
-/* Agrega un padding al contenedor */
-.container {
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+/* Establece las reglas de estilo para la barra de navegación cuando la pantalla es mayor a 768 píxeles */
+@media screen and (min-width: 768px) {
+  /* Establece la dirección de la barra de navegación como horizontal */
+  nav {
+    flex-direction: row;
+  }
+
+  /* Establece la barra de navegación para que siempre esté en la parte superior de la página */
+  .container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  /* Establece la barra de navegación para que siempre esté en la parte superior de la página */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  /* Establece cada botón de la barra de navegación como una caja con borde */
+  .navbar li {
+    border: 1px solid black;
+  }
 }
