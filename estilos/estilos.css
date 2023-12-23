@@ -2,9 +2,10 @@ html{
   font-size: 62.5%;
 }
 
-.body {
+body {
+background-image: url(/imagenes/mobile.jpg);
 font-size: 16px;
-background-image: url(imagenes/mobile.jpg);
+
 
 }
 
@@ -20,7 +21,7 @@ background-image: url(imagenes/mobile.jpg);
 
 .navegacion
 {
- 
+  text-align: center;
   display: flex;
   justify-content:space-evenly
  }
@@ -36,6 +37,10 @@ background-image: url(imagenes/mobile.jpg);
   color: white;
   text-shadow: 2px 2px 4px #ffffff;
   
+ }
+ .posticon{
+  position: initial;
+
  }
  
  .container
