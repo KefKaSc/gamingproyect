@@ -14,7 +14,7 @@ html, body {
 }
 
 body {
-  background-image: url(mobile.jpg);
+  background-image: url(/imagenes/mobile.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto;
@@ -134,3 +134,22 @@ body {
   display: flex;
   align-items: center;
 }
+
+/* Media queries */
+@media (max-width: 768px) {
+  .navegacion ul.menu {
+    flex-direction: column;
+  }
+
+  .navegacion a {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+
+  .dropdown-menu {
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+  }
+}
+
