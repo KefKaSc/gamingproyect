@@ -6,16 +6,20 @@
     background: #000;
     padding: 2rem;
     color: #fff;
-    width: 300px; /* Ajusta el ancho del formulario según tus necesidades */
-    height: auto; /* Ajusta la altura del formulario según tus necesidades */
+    width: 300px; 
+    height: auto; 
     animation: lightEffect 2s linear infinite;
-  }
-  .register-link,
+    border-radius: 10px; /* Añade bordes redondeados */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Añade sombra para dar profundidad */
+}
+
+.register-link,
 .forgot-password-link {
   display: block;
   color: #fff;
   text-decoration: none;
   margin-top: 1rem;
+  transition: color 0.3s ease; /* Añade transición para un cambio de color suave */
 }
 
 .register-link:hover,
