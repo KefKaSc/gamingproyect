@@ -1,5 +1,6 @@
 ---
-import Componentes from "../components/Navbar.astro"
+import Navbar from "../components/Navbar.astro"
+import Login from "../components/Login.astro"
 
 
 ---
@@ -18,20 +19,10 @@ import Componentes from "../components/Navbar.astro"
 </head>
 <body>
 	
-		<Componentes />
+		<Navbar />
 	  
 	  <section>
-		<div class="login-form">
-			<form action="/submit-login" method="post">
-			  <label for="username">Username:</label>
-			  <input type="text" id="username" name="username">
-			  <label for="password">Password:</label>
-			  <input type="password" id="password" name="password">
-			  <input type="submit" value="Ingresar">
-			</form>
-			<a href="/register" class="register-link">Registrarse</a>
-			<a href="/forgot-password" class="forgot-password-link">¿Has olvidado la contraseña?</a>
-		  </div>
+		<Login/>
 	  </section>
 	
 	
