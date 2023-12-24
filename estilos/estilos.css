@@ -106,22 +106,26 @@ body {
 
  
 /* LOGIN */
-.login-form {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
   background: #000;
+}
+
+.login-form {
   padding: 2rem;
   color: #fff;
   width: 300px; 
   height: auto; 
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Sombra negra */
-  display: flex; /* Flexbox para ordenar el contenido */
-  flex-direction: column; /* Orientación vertical del contenido */
-  justify-content: center; /* Centrar el contenido verticalmente */
-  align-items: center; /* Centrar el contenido horizontalmente */
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
 }
 
 .login-form label,
@@ -129,30 +133,30 @@ body {
 .login-form input[type="password"],
 .register-link,
 .forgot-password-link {
-  text-shadow: 1px 1px 2px #000; /* Sombra negra al texto */
+  color: #fff; 
 }
 
 .login-form input[type="text"],
 .login-form input[type="password"] {
-  width: 100%; /* Ancho del área de texto */
-  margin-top: 0.5rem; /* Espacio entre el texto y el área de texto */
+  width: 100%; 
+  margin-top: 0.5rem; 
 }
 
 .login-form input[type="submit"],
 .register-link {
-  background: #fff; /* Fondo blanco */
-  color: #000; /* Texto negro */
-  border: none; /* Sin borde */
-  padding: 0.5rem 1rem; /* Padding para darle tamaño */
-  cursor: pointer; /* Cambiar el cursor a modo "mano" */
-  transition: background 0.3s ease; /* Transición suave al cambiar el fondo */
-  margin-top: 1rem; /* Espacio por encima del botón */
-  display: inline-block; /* Para que los botones estén uno al lado del otro */
+  background: #fff; 
+  color: #000; 
+  border: none; 
+  padding: 0.5rem 1rem; 
+  cursor: pointer; 
+  transition: background 0.3s ease; 
+  margin-top: 1rem; 
+  display: inline-block; 
 }
 
 .login-form input[type="submit"]:hover,
 .register-link:hover {
-  background: #ddd; /* Cambiar el fondo al pasar el mouse */
+  background: #ddd; 
 }
 
 .forgot-password-link {
@@ -166,3 +170,4 @@ transition: color 0.3s ease;
 .forgot-password-link:hover {
 color: #ddd;
 }
+
