@@ -34,8 +34,13 @@ body {
   border-image-slice: 1;
   border-image-source: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
   animation: lightEffect 2s linear infinite;
-  z-index: 9999;
+  z-index: 1;
   height: 40px;
+}
+
+.container {
+  width: 120rem;
+  margin: 0 auto;
 }
 
 .navegacion {
@@ -57,7 +62,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 0.7rem;
-  color: azure;
+  color: #F0FFFF;
   font-size: 1.5rem;
   text-decoration: none;
   margin: 0;
@@ -68,11 +73,6 @@ body {
 .navegacion a:hover {
   color: white;
   text-shadow: 2px 2px 4px #ffffff;
-}
-
-.container {
-  width: 120rem;
-  margin: 0 auto;
 }
 
 .button {
