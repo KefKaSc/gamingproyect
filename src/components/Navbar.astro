@@ -1,13 +1,28 @@
-<div class="nav-bg sticky-top">
-  
-    
-    <nav class="navegacion conteiner">
-        <img src="/imagenes/sc2logo.png" alt="Logo" class="logo">
+
+<astro-navbar>
+  <div class="nav-bg sticky-top">
+    <nav class="navegacion container">
+      <img src="/imagenes/sc2logo.png" alt="Logo" class="logo">
       <ul>
-        <a href="/scr/pages/index.astro"class="button lugar ">Home</a>
-        <a href="equipos.astro"class="button">Equipos</a>
-        <a href="comunidades.astro"class="button">Comunidades</a>
-        <a href="torneos.astro"class="button">Torneos</a>
+        <li>
+          <a href="/scr/pages/index.astro" class="button lugar ">Home</a>
+        </li>
+        <li class="dropdown">
+          <a href="equipos.astro" class="button dropdown-toggle">Equipos</a>
+          <div class="dropdown-menu">
+            <a href="#">Norte America</a>
+            <a href="#">Europa</a>
+            <a href="#">Asia</a>
+            <a href="#">Latam</a>
+          </div>
+        </li>
+        <li>
+          <a href="comunidades.astro" class="button">Comunidades</a>
+        </li>
+        <li>
+          <a href="torneos.astro" class="button">Torneos</a>
+        </li>
       </ul>
-   </nav>
-</div>
+    </nav>
+  </div>
+</astro-navbar>

@@ -6,10 +6,11 @@
     background-position: 200% 0;
   }
 }
+
 html, body {
   margin: 0;
   padding: 0;
-  font-size: 62.5%;
+  font-size: 100%;
 }
 
 body {
@@ -19,7 +20,6 @@ body {
   background-size: auto;
   font-size: 16px;
 }
-
 
 /* Navegacion */
 .nav-bg {
@@ -104,70 +104,20 @@ body {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
  
-/* LOGIN */
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background: #000;
-}
-
-.login-form {
-  padding: 2rem;
-  color: #fff;
-  width: 300px; 
-  height: auto; 
-  border-radius: 10px;
-  display: flex; 
-  flex-direction: column; 
-  justify-content: center; 
-  align-items: center; 
-}
-
-.login-form label,
-.login-form input[type="text"],
-.login-form input[type="password"],
-.register-link,
-.forgot-password-link {
-  color: #fff; 
-}
-
-.login-form input[type="text"],
-.login-form input[type="password"] {
-  width: 100%; 
-  margin-top: 0.5rem; 
-}
-
-.login-form input[type="submit"],
-.register-link {
-  background: #fff; 
-  color: #000; 
-  border: none; 
-  padding: 0.5rem 1rem; 
-  cursor: pointer; 
-  transition: background 0.3s ease; 
-  margin-top: 1rem; 
-  display: inline-block; 
-}
-
-.login-form input[type="submit"]:hover,
-.register-link:hover {
-  background: #ddd; 
-}
-
-.forgot-password-link {
-display: block;
-color: #fff;
-text-decoration: none;
-margin-top: 1rem;
-transition: color 0.3s ease;
-}
-
-.forgot-password-link:hover {
-color: #ddd;
-}
-
