@@ -41,13 +41,13 @@ body {
 .navegacion {
   text-align: center;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
-.navegacion ul {
+.navegacion ul.menu {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   margin: 0;
   padding: 0;
 }
@@ -61,6 +61,7 @@ body {
   font-size: 2rem;
   text-decoration: none;
   margin: 0;
+  width: 150px; /* Aumenta el ancho de los botones */
 }
 
 .navegacion a:hover {
@@ -80,7 +81,6 @@ body {
   -webkit-backdrop-filter: blur(3.5px);
   border-left: 1px solid rgba(16, 0, 0, 1);
   border-right: 1px solid rgba(16, 0, 0, 1);
-  width: 100px; /* Define el ancho de los botones */
   height: 50px; /* Define el alto de los botones */
   margin: 0;
 }
@@ -96,8 +96,7 @@ body {
 .logo {
   border-right: 1px solid #000; /* Cambia el color según tus necesidades */
   height: 70px; /* Ajusta el tamaño del logo según tus necesidades */
-  margin-right: auto;
-  margin-left: 1rem; /* Añade un margen a la izquierda del logo */
+  margin-right: 1rem; /* Añade un margen a la derecha del logo */
 }
 
 .logo:hover {
@@ -114,10 +113,24 @@ body {
   position: absolute;
   min-width: 160px;
   z-index: 1;
+  background: rgba(16, 0, 0, 0.12);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+  border: 1px solid rgba(16, 0, 0, 1);
+  /* Agrega el efecto de luz */
+  border-bottom: 3px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+  animation: lightEffect 2s linear infinite;
+  flex-direction: row; /* Hace que el menú sea horizontal */
 }
 
 .dropdown:hover .dropdown-menu {
-  display: block;
+  display: flex;
 }
 
- 
+.logo-home {
+  display: flex;
+  align-items: center;
+}
