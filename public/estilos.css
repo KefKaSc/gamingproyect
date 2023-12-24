@@ -10,18 +10,17 @@
 html {
   margin: 0;
   padding: 0;
-  font-size: 62.5%; /* Tamaño de fuente base */
+  font-size: 62.5%;
 }
 
 body {
   background-image: url(mobile.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: auto;
-  font-size: 1.4rem; /* Tamaño de fuente reducido de 16px a 14px */
+  background-size: cover;
+  font-size: 1.4rem;
 }
 
-/* Navegación */
 .nav-bg {
   position: fixed;
   top: 0;
@@ -31,12 +30,12 @@ body {
   backdrop-filter: blur(3.5px);
   -webkit-backdrop-filter: blur(3.5px);
   border: 1px solid rgba(16, 0, 0, 1);
-  /* Agrega el efecto de luz */
   border-bottom: 3px solid;
   border-image-slice: 1;
   border-image-source: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
   animation: lightEffect 2s linear infinite;
-  z-index: 9999; /* Añadido para que la barra de navegación siempre esté arriba */
+  z-index: 9999;
+  height: 40px;
 }
 
 .navegacion {
@@ -48,7 +47,7 @@ body {
 
 .navegacion ul.menu {
   display: flex;
-  justify-content: flex-start; /* Cambiado de flex-end a flex-start */
+  justify-content: flex-start;
   margin: 0;
   padding: 0;
 }
@@ -57,12 +56,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.7rem; /* Padding reducido de 0.8rem a 0.7rem */
+  padding: 0.7rem;
   color: azure;
-  font-size: 1.5rem; /* Tamaño de fuente reducido de 1.6rem a 1.5rem */
+  font-size: 1.5rem;
   text-decoration: none;
   margin: 0;
-  width: 110px; /* Ancho reducido de 120px a 110px */
+  width: 110px;
+  height: 40px;
 }
 
 .navegacion a:hover {
@@ -80,14 +80,11 @@ body {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3.5px);
   -webkit-backdrop-filter: blur(3.5px);
-  border-left: 1px solid rgba(16, 0, 0, 1);
-  border-right: 1px solid rgba(16, 0, 0, 1);
-  height: 35px; /* Altura reducida de 40px a 35px */
   margin: 0;
 }
 
 .button:first-child {
-  margin-left: auto; /* Añadido para mover el logo y el inicio a la derecha */
+  margin-left: auto;
 }
 
 .button:hover {
@@ -95,9 +92,8 @@ body {
 }
 
 .logo {
-  border-right: 1px solid #000; /* Cambia el color según tus necesidades */
-  height: 40px; /* Altura aumentada de 35px a 40px */
-  margin-right: 1rem; /* Añade un margen a la derecha del logo */
+  height: 40px;
+  margin-right: 1rem;
 }
 
 .logo:hover {
@@ -119,13 +115,12 @@ body {
   backdrop-filter: blur(3.5px);
   -webkit-backdrop-filter: blur(3.5px);
   border: 1px solid rgba(16, 0, 0, 1);
-  /* Agrega el efecto de luz */
   border-bottom: 3px solid;
   border-image-slice: 1;
   border-image-source: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
   animation: lightEffect 2s linear infinite;
-  flex-direction: row; /* Hace que el menú sea horizontal */
-  height: 35px; /* Altura igualada a la de la barra de navegación */
+  flex-direction: row;
+  height: 40px;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -135,6 +130,38 @@ body {
 .logo-home {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Añadido para mover el logo y el inicio más a la izquierda */
+  justify-content: flex-start;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 3px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+  animation: lightEffect 2s linear infinite;
+}
+
+.search input[type="text"] {
+  width: 100px;
+  padding: 5px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.avatar-img {
+  height: 70px;
+  width: 70px;
+  border: double 5px #00FFFF;
+  border-radius: 5%;
+  margin-left: 1rem;
+  margin-bottom: -15px;
 }
 
