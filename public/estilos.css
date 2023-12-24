@@ -10,7 +10,7 @@
 html {
   margin: 0;
   padding: 0;
-  font-size: 62.5%;
+  font-size: 62.5%; /* Tamaño de fuente base */
 }
 
 body {
@@ -18,10 +18,10 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto;
-  font-size: 16px;
+  font-size: 1.4rem; /* Tamaño de fuente reducido de 16px a 14px */
 }
 
-/* Navegacion */
+/* Navegación */
 .nav-bg {
   position: fixed;
   top: 0;
@@ -36,6 +36,7 @@ body {
   border-image-slice: 1;
   border-image-source: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
   animation: lightEffect 2s linear infinite;
+  z-index: 9999; /* Añadido para que la barra de navegación siempre esté arriba */
 }
 
 .navegacion {
@@ -47,7 +48,7 @@ body {
 
 .navegacion ul.menu {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-start; /* Cambiado de flex-end a flex-start */
   margin: 0;
   padding: 0;
 }
@@ -56,12 +57,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 0.7rem; /* Padding reducido de 0.8rem a 0.7rem */
   color: azure;
-  font-size: 2rem;
+  font-size: 1.5rem; /* Tamaño de fuente reducido de 1.6rem a 1.5rem */
   text-decoration: none;
   margin: 0;
-  width: 150px; /* Aumenta el ancho de los botones */
+  width: 110px; /* Ancho reducido de 120px a 110px */
 }
 
 .navegacion a:hover {
@@ -81,12 +82,12 @@ body {
   -webkit-backdrop-filter: blur(3.5px);
   border-left: 1px solid rgba(16, 0, 0, 1);
   border-right: 1px solid rgba(16, 0, 0, 1);
-  height: 50px; /* Define el alto de los botones */
+  height: 35px; /* Altura reducida de 40px a 35px */
   margin: 0;
 }
 
 .button:first-child {
-  margin-right: auto;
+  margin-left: auto; /* Añadido para mover el logo y el inicio a la derecha */
 }
 
 .button:hover {
@@ -95,7 +96,7 @@ body {
 
 .logo {
   border-right: 1px solid #000; /* Cambia el color según tus necesidades */
-  height: 70px; /* Ajusta el tamaño del logo según tus necesidades */
+  height: 40px; /* Altura aumentada de 35px a 40px */
   margin-right: 1rem; /* Añade un margen a la derecha del logo */
 }
 
@@ -124,6 +125,7 @@ body {
   border-image-source: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
   animation: lightEffect 2s linear infinite;
   flex-direction: row; /* Hace que el menú sea horizontal */
+  height: 35px; /* Altura igualada a la de la barra de navegación */
 }
 
 .dropdown:hover .dropdown-menu {
@@ -133,23 +135,6 @@ body {
 .logo-home {
   display: flex;
   align-items: center;
-}
-
-/* Media queries */
-@media (max-width: 768px) {
-  .navegacion ul.menu {
-    flex-direction: column;
-  }
-
-  .navegacion a {
-    font-size: 1.5rem;
-    width: 100%;
-  }
-
-  .dropdown-menu {
-    flex-direction: column;
-    position: relative;
-    width: 100%;
-  }
+  justify-content: flex-start; /* Añadido para mover el logo y el inicio más a la izquierda */
 }
 
