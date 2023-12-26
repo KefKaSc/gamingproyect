@@ -1,0 +1,86 @@
+
+---
+import { Astronav, MenuItems, MenuIcon } from 'astro-navbar';
+---
+<astro-navbar>
+    <div>
+      <nav id="navbar">
+        <style>
+          #navbar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            font-size: 20px;
+            display: flex;
+            justify-content: center; /* Centra el navbar horizontalmente */
+            align-items: center; /* Centra el navbar verticalmente */
+          }
+  
+          #navbar ul {
+            display: flex;
+            justify-content: space-around;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            flex-direction: row; /* Cambia la dirección a fila para un navbar horizontal */
+          }
+  
+          #navbar li {
+            margin: 0 10px; /* Añade margen a los lados de cada elemento de la lista */
+          }
+  
+          #navbar a {
+            text-decoration: none;
+            color: white;
+            background: inherit;
+            border-radius: 0;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(1px);
+            -webkit-backdrop-filter: blur(1px);
+            border: 1px solid rgba(0, 0, 0, 1);
+            text-align: center; /* Centra el texto dentro del botón */
+            text-shadow: 2px 2px 4px #000000;
+            text-decoration: none;
+            height: 50px;
+            width: 100px;
+            line-height: 35px;
+            font-size: 18px;
+          }
+  
+          @media (max-width: 480px) {
+            #navbar ul {
+              justify-content: center; /* Centra los elementos de la lista horizontalmente */
+            }
+  
+            #navbar li {
+              margin: 0; /* Elimina el margen a los lados de cada elemento de la lista */
+            }
+  
+            #navbar a {
+              font-size: 18px;
+              height: 40px;
+              line-height: 30px;
+              border-left: none; /* Elimina el borde izquierdo */
+            }
+  
+            /* Añade el borde izquierdo solo al primer botón */
+            #navbar li:first-child a {
+              border-left: 1px solid rgba(0, 0, 0, 1);
+            }
+          }
+        </style>
+        <Astronav>
+          <MenuItems>
+            <ul>
+              <li><a href="#">Admin Chat</a></li>
+              <li><a href="#">Mi Equipo</a></li>
+              <li><a href="#">Mis Comunidades</a></li>
+              <li><a href="#">Mis Torneos</a></li>
+            </ul>
+          </MenuItems>
+        </Astronav>
+      </nav>
+    </div>
+  </astro-navbar>
+  
