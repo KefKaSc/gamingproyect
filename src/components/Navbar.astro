@@ -1,159 +1,31 @@
----
-import { Astronav, MenuItems, MenuIcon } from 'astro-navbar';
----
-<astro-navbar>
-  <div>
-    <nav>
-      <style>
-        .logo {
-          width: 35px;
-          height: 35px;
-          border-left: none; /* elimina el borde izquierdo */
-          border-right: 4px double #000; /* ajusta el borde derecho a un borde doble */
-        }
 
-        .avatar-img {
-          width: 55px;
-          height: 55px;
-          margin-right: 10px;
-          border: 3px solid #000;
-          box-shadow: 0 0 0 3px #fff;
-          position: relative;
-          top: -10px; /* ajusta este valor según tus necesidades */
-        }
+<header class="header">
+    <div class="logo-header">
+      <img src="imagenes/sc2logo.png" alt="">
+    </div>
 
-        nav {
-          height: 25px;
-        }
 
-        nav ul {
-          display: flex;
-          justify-content: space-between;
-          flex-direction: row;
-          border: 1px solid rgba(0, 0, 0, 1);
-          list-style-type: none;
-          align-items: center;
-          padding: 0;
-        }
+<div class="nav-menu">
+  <input type="checkbox" id="check">
+<label for="check" class="checkboton">
 
-        .dropdown-menu {
-          display: none;
-          position: absolute;
-          background: inherit;
-          width: 100%;
-        }
+  <i class="menu-iconos"><img src="imagenes/hamburguesa.svg" alt=""></i>
+</label>
 
-        .dropdown-menu a {
-          display: inline-block;
-          padding: 10px;
-          text-decoration: none;
-        }
 
-        .dropdown:hover .dropdown-menu {
-          display: block;
-        }
+<ul>
+    
+  
+    <li><a href="#"></href>Equipos</a></li>
+    <li><a href="#"></href>Comunidades</a></li>
+    <li><a href="#"></href>Torneos</a></li>
+    <li><a href="#"></href>Contacto</a></li>
+    <li><input type="search" id="buscador" name="buscador"> </li>
+      
+     
+  </ul>
+  
+</div>
 
-        .hamburger-menu {
-          display: none;
-        }
+</header>
 
-        .button {
-          background: inherit;
-          border-radius: 0;
-          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-          backdrop-filter: blur(1px);
-          -webkit-backdrop-filter: blur(1px);
-          border: 1px solid rgba(0, 0, 0, 1);
-          color: white;
-          text-align: center;
-          text-shadow: 2px 2px 4px #000000;
-          text-decoration: none;
-          height: 50px;
-          width: 100px;
-          line-height: 35px;
-          font-size: 18px;
-        }
-
-        .button:hover {
-          background-color: #ddd;
-          color: black;
-          box-shadow: 0 0 10px #9ecaed;
-        }
-
-        .button:active {
-          outline: none;
-        }
-
-        .button:focus {
-          outline: none;
-        }
-
-        @media (max-width: 480px) {
-          .hamburger-menu, .avatar-img, .menu-option.search {
-            display: block;
-          }
-
-          .logo {
-            width: 25px;
-            height: 25px;
-          }
-
-          .avatar-img {
-            width: 45px;
-            height: 45px;
-          }
-
-          .menu-option:not(.search) {
-            display: none;
-          }
-        }
-
-        @media (min-width: 768px) and (max-width: 920px) {
-          .logo, .avatar-img {
-            width: 55px;
-            height: 55px;
-          }
-        }
-
-        @media (min-width: 920px) {
-          .menu-option, .logo, .avatar-img {
-            display: block;
-          }
-
-          .logo, .avatar-img {
-            width: 65px;
-            height: 65px;
-          }
-        }
-      </style>
-      <ul>
-        <li class="hamburger-menu">
-          <a href="#">☰</a>
-        </li>
-        <li class="logo-home menu-option">
-          <img src="sc2logo.png" alt="Logo" class="logo">
-        </li>
-        <li class="dropdown menu-option button">
-          <a href="#">Equipos</a>
-          <div class="dropdown-menu">
-            <a href="#">Norte America</a>
-            <a href="#">Europa</a>
-            <a href="#">Asia</a>
-          </div>
-        </li>
-        <li class="menu-option button">
-          <a href="#">Comunidades</a>
-        </li>
-        <li class="menu-option button">
-          <a href="#">Torneos</a>
-        </li>
-        <li class="menu-option search">
-          <input type="text" placeholder="Buscar...">
-        </li>
-        <li>
-          <img src="avatar.jpeg" alt="Avatar" class="avatar-img">
-        </li>
-      </ul>
-    </nav>
-  </div>
-</astro-navbar>
