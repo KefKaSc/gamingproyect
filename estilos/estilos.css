@@ -13,18 +13,18 @@ background-color: rgb(19, 18, 20);
 
 a, li {
   color: white;
+  font-size: 25px;
+ 
 
 }
 .logo-header img{
   width: 70px;
-  height: 70px;
-  margin-left: 3rem;
 }
 
 header{
   background-color: black;
   display: flex;
-  justify-content: center;
+  justify-content:space-between;
   align-items: center;
   padding:0;
 
@@ -38,19 +38,25 @@ header{
 }
 .nav-menu li{
   margin-right: 1.5rem;
-  font-size: 25px;
+ 
  
 }
-
+.nav-menu a:hover{
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 1px #070707;
+}
  
-
+.nav-menu li:last-child{
+  border: 2px solid;
+  border-color: rgb(42, 42, 54);
+}
 .menu-icono img{
   width: 47px;
   height: 47px;
   border-radius: 2px;
   display: none;
 }
-.menu-icono{
+.menu-icon{
   display: none;
 }
 #check{
